@@ -24,3 +24,25 @@ if __name__ == "__main__":
         print("Usage: python neonscript.py <filename>")
     else:
         interpret(sys.argv[1])
+import turtle
+
+def draw_circle(radius, x, y):
+    turtle.penup()
+    turtle.goto(x, y)
+    turtle.pendown()
+    turtle.circle(radius)
+
+def draw_rectangle(width, height, x, y):
+    turtle.penup()
+    turtle.goto(x, y)
+    turtle.pendown()
+    for _ in range(2):
+        turtle.forward(width)
+        turtle.right(90)
+        turtle.forward(height)
+        turtle.right(90)
+
+# Example of how it might work
+draw_circle(50, 100, 100)
+draw_rectangle(200, 100, 50, 50)
+turtle.done()
